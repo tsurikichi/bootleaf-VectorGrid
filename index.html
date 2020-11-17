@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello L.VectorGrid.Protobuf</title>
+    <title>L.VectorGrid &Aacute; PWA</title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+    <link rel="manifest" href="manifest.json">
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.min.js"></script>
 </head>
@@ -13,8 +14,18 @@
 <body>
     <div id="map" style="position:absolute;top:0;left:0;bottom:0;right:0;"></div>
     <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service_worker.js').then(function (registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function (err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+
+
         var map = L.map("map", {
-            maxZoom: 19,
+            maxZoom: 16,
+            minZoom: 10,
             zoom: 15,
             center: [35.340371, 139.410726]
         });
@@ -29,7 +40,7 @@
             attribution: "<a href='https://github.com/gsi-cyberjapan/gsimaps-vector-experiment' target='_blank'>地理院地図Vector（仮称）提供実験のデータを利用しています。</a>",
             maxNativeZoom: 14,
             minNativeZoom: 14,
-            maxZoom: 18,
+            maxZoom: 16,
             rendererFactory: L.canvas.tile,
             vectorTileLayerStyles: {
                 "contour": {
