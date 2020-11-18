@@ -8,34 +8,10 @@
     <link rel="manifest" href="manifest.json">
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.min.js"></script>
-    <script>
-        var defferedPrompt;
-        window.addEventListener('beforeinstallprompt', function(event) {
-            event.preventDefault();
-            defferedPrompt = event;
-            return false;
-        })
- 
-        // イベントを意図的に発火
-        function pwaInstall() {
-            console.log('pwaInstall Click.');
-            if (defferedPrompt) {
-                defferedPrompt.prompt();
-                defferedPrompt.userChoice.then(function(choiceResult) {
-                    if (choiceResult.outcome === 'dismissed') {
-                        console.log('pwaInstall Click.');
-                    } else {
-                        window.alert('Thank You!');
-                    }
-                });
-                defferedPrompt = null;
-            }
-        }
-    </script>
 </head>
 
 <body>
-    <div id="map" style="position:absolute;top:0;left:0;bottom:150px;right:0;"></div>
+    <div id="map" style="position:absolute;top:0;left:0;bottom:0;right:0;"></div>
     <input type="button" value="ホーム画面にインストール" onclick="pwaInstall()" style="width: 100%;height: 150px;position: fixed;bottom: 0;">
     <script>
         if ('serviceWorker' in navigator) {
