@@ -3,7 +3,7 @@ var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
     '/leaflet-VectorGrid/index.html',
     '/leaflet-VectorGrid/',
-    '/cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/',
+    'https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/',
 ];
 
 // インストール処理
