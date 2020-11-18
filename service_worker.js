@@ -1,10 +1,12 @@
-// ƒLƒƒƒbƒVƒ…ƒtƒ@ƒCƒ‹‚Ìw’è
+// ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ•ã‚¡ã‚¤ãƒ«ã®æŒ‡å®š
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
     '/tsurikichi.github.io/leaflet-VectorGrid/index.html',
+    '/tsurikichi.github.io/leaflet-VectorGrid/',
+    '/cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/',
 ];
 
-// ƒCƒ“ƒXƒg[ƒ‹ˆ—
+// ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å‡¦ç†
 self.addEventListener('install', function (event) {
     event.waitUntil(
         caches
@@ -16,7 +18,7 @@ self.addEventListener('install', function (event) {
     );
 });
 
-// ƒŠƒ\[ƒXƒtƒFƒbƒ`‚ÌƒLƒƒƒbƒVƒ…ƒ[ƒhˆ—
+// ãƒªã‚½ãƒ¼ã‚¹ãƒ•ã‚§ãƒƒãƒæ™‚ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ­ãƒ¼ãƒ‰å‡¦ç†
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches
