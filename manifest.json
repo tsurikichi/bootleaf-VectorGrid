@@ -4,7 +4,7 @@
 	"display": "standalone",
         "scope": "/leaflet-VectorGrid/",
 //	"start_url": "https://tsurikichi.github.io/leaflet-VectorGrid/index.html",
-	"start_url": "./index.html",
+	"start_url": "./index.html?utm_source=homescreen",
 	"icons": [
 		{
 			"src": "images/icon.jpeg",
