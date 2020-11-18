@@ -34,7 +34,7 @@
 
 <body>
     <div id="map" style="position:absolute;top:0;left:0;bottom:100px;right:0;"></div>
-    <input type="button" value="ホーム画面にインストール" onclick="pwaInstall()">
+    <input type="button" value="ホーム画面にインストール" onclick="pwaInstall()" style="width: 100%;height: 150px;position: fixed;bottom: 0;">
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service_worker.js').then(function (registration) {
