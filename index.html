@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <div id="map" style="position:absolute;top:0;left:0;bottom:0;right:0;"></div>
+    <div id="map" style="position:absolute;top:0;left:0;bottom:20px;right:0;"></div>
     <input type="button" value="ホーム画面にインストール" onclick="pwaInstall()">
     <script>
         if ('serviceWorker' in navigator) {
@@ -65,6 +65,8 @@
             maxZoom: 16,
             rendererFactory: L.canvas.tile,
             vectorTileLayerStyles: {
+                color: "black",
+                weight: 0,
                 "contour": {
                     color: "green",
                     weight: 1
@@ -73,11 +75,11 @@
                     color: "purple",
                     weight: 1
                 },
-/*                "road": {
+                "road": {
                     color: "red",
                     weight: 1
                 },
-*/                "railway": {
+                "railway": {
                     color: "yellow",
                     weight: 2
                 },
