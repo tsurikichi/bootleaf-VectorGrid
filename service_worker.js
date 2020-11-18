@@ -1,8 +1,8 @@
 // キャッシュファイルの指定
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-    '/tsurikichi.github.io/leaflet-VectorGrid/index.html',
-    '/tsurikichi.github.io/leaflet-VectorGrid/',
+    '/leaflet-VectorGrid/index.html',
+    '/leaflet-VectorGrid/',
     '/cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/',
 ];
 
